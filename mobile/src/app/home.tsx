@@ -93,7 +93,7 @@ export default function Home() {
                     latitude: currentLocation.latitude,
                     longitude: currentLocation.longitude,
                     latitudeDelta: 0.01,
-                    longitudeDelta: 0.01
+                    longitudeDelta: 0.01,
                 }}
             >
                 {markets.map((item) => (
@@ -107,8 +107,8 @@ export default function Home() {
                         image={require("@/assets/pin.png")}
                     >
 
-                        <Callout style={{ backgroundColor: "red", width: 100, height: 100 }} onPress={() => router.navigate(`/market/${item.id}`)}>
-                            <View style={{ backgroundColor: "red", width: 100, height: 100 }}>
+                        <Callout onPress={() => router.navigate(`/market/${item.id}`)}>
+                            <View>
 
                                 <Text
                                     style={{
